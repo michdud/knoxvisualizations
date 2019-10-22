@@ -1,0 +1,73 @@
+.container{
+	padding-top:1rem;
+}
+
+.title{
+	text-align: center;
+}
+
+.avgpers, .grad {
+  position:relative;
+  height:0;
+  width:100%;
+  padding:0;
+  padding-bottom:100%;
+}
+
+.avgpers > svg, .grad > svg{
+  position: absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3px;
+}
+
+.axis {
+	font-size:14px;
+}
+
+.row {
+	padding-top:1rem;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #F1F3F3;
+  stroke: #6F257F;
+  stroke-width: 5px;
+}
+  
+.hover-line {
+  stroke: #6F257F;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
+}
+
+.container {
+	padding-bottom: 3rem;
+}
+
+#dottedline{
+	opacity:.1;
+}
+
+.lineEndText{
+	font-size:10px;
+}
+.gray-block{
+  background-color:#ededed;
+  padding-bottom: 1rem;
+  padding-top:1rem;
+  padding-left: 1rem;
+  padding-right:1rem;
+  margin-top:1rem;
+}

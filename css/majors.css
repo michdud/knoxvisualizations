@@ -1,0 +1,84 @@
+.nonresident, .hispanic, .asian, .black, .white, .multiracial{
+  position:relative;
+  height:0;
+  width:100%;
+  padding:0;
+  padding-bottom:100%;
+}
+
+.nonresident > svg , .hispanic > svg, .asian > svg, .black > svg, .white > svg, .multiracial > svg{
+  position: absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.bar{
+  fill:#1ba39c;
+}
+
+.bar:hover{
+  fill:#10706b;
+}
+
+.col-xl-6{
+  padding-top:1rem;
+  padding-bottom:1rem;
+  border-bottom:1px solid #e0e0e0;
+  text-align:center;
+}
+
+.container-fluid{
+  padding-bottom:3rem;
+}
+
+.mytitle{
+  text-align:center;
+  margin-top:1rem;
+}
+
+.gray-block{
+  background-color:#ededed;
+  padding-bottom: 1rem;
+}
+
+img{
+  position:relative;
+  color:#0275d8;
+}
+
+.selectform{
+  line-height:100px;
+}
+
+.view, .desc{
+  padding-top:1rem;
+}

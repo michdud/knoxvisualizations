@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Percent of Degrees Awarded by Race/Ethnicity and Major: 2013-2017</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/majors.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="knoxvis.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="raceeth.html">Student Race/Ethnicity Composition</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="majors.html">Degrees by Race/Ethnicity<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="persandgrad.html">Persistence and Graduation Rates</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="mytitle"><h2>Percent of Degrees Awarded by Race/Ethnicity and Major: 2013-2017</h2></div>
+    <div class="row">
+      <div class="col-xl-6">
+       <h5>Degrees awarded to nonresident students, 2013-2017 <a href="data/nonresident-majors.csv"><img src="img/download.svg" alt="Download CSV"/></a></h5>
+       <div class="nonresident"></div>
+     </div>
+     <div class="col-xl-6">
+       <h5>Degrees awarded to Hispanic students, 2013-2017 <a href="data/hispanic-majors.csv"><img src="img/download.svg" alt="Download CSV"/></a></h5>
+       <div class="hispanic"></div>
+     </div>
+   </div>
+   <div class="row">
+    <div class="col-xl-6">
+     <h5>Degrees awarded to Asian students, 2013-2017 <a href="data/asian-majors.csv"><img src="img/download.svg" alt="Download CSV"/></a></h5>
+     <div class="asian"></div>
+   </div>
+   <div class="col-xl-6">
+     <h5>Degrees awarded to Black or African American students, 2013-2017 <a href="data/black-majors.csv"><img src="img/download.svg" alt="Download CSV"/></a></h5>
+     <div class="black"></div>
+   </div>
+ </div>
+ <div class="row">
+  <div class="col-xl-6">
+   <h5>Degrees awarded to White students, 2013-2017 <a href="data/white-majors.csv"><img src="img/download.svg" alt="Download CSV"/></a></h5>
+   <div class="white"></div>
+ </div>
+ <div class="col-xl-6">
+   <h5>Degrees awarded to multiracial students, 2013-2017 <a href="data/multiracial-majors.csv"><img src="img/download.svg" alt="Download CSV"/></a></h5>
+   <div class="multiracial"></div>
+ </div>
+</div>
+
+
+<div class="row gray-block">
+  <div class="col-lg-6 view">
+    <h5>View</h5><p>Highlight a major:</p>
+    <select class="form-control" id="majorselect">
+      <option selected="selected">Select a major</option>
+      <option>Africana Studies</option>
+      <option>American Studies</option>
+      <option>Anthropology & Sociology</option>
+      <option>Art History</option>
+      <option>Asian Studies</option>
+      <option>Biochemistry</option>
+      <option>Biology</option>
+      <option>Black Studies</option>
+      <option>Chemistry</option>
+      <option>Classics</option>
+      <option>Classics - Greek</option>
+      <option>Classics - Latin</option>
+      <option>Computer Science</option>
+      <option>Creative writing</option>
+      <option>Economics</option>
+      <option>Ed Studies - Content Area</option>
+      <option>Ed Studies - Elementary</option>
+      <option>Ed Studies - Secondary</option>
+      <option>English Literature</option>
+      <option>Environmental Studies</option>
+      <option>Financial Mathematics</option>
+      <option>French</option>
+      <option>Gender & Women's Studies</option>
+      <option>German</option>
+      <option>History</option>
+      <option>Integrated International Studies</option>
+      <option>International Relations</option>
+      <option>International Studies</option>
+      <option>Mathematics</option>
+      <option>Mod Lang - French</option>
+      <option>Mod Lang - German</option>
+      <option>Mod Lang - Spanish</option>
+      <option>Music</option>
+      <option>Neuroscience</option>
+      <option>Philosophy</option>
+      <option>Physics</option>
+      <option>Political Science</option>
+      <option>Psychology</option>
+      <option>Self-Designed Major</option>
+      <option>Social Science Education</option>
+      <option>Spanish</option>
+      <option>Studio Art</option>
+      <option>Theatre</option>
+    </select>
+  </div>
+  <div class="col desc">
+    <h5>Description</h5>
+    <p>Data received from Student Senate about student race/ethnicity and degrees at Knox College between 2013-2017. Hover over any bar to see more information.</p><a href="data/DegreesByEth.pdf" style="color:#000000"><img src="img/download.svg" alt="Download CSV"/> Download original dataset</a></div>
+  </div>
+
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+<script src="js/d3tip.js"></script>
+<script src="js/nonresident.js"></script>
+<script src="js/majors_all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
